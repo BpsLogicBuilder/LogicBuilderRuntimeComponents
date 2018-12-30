@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>LogicBuilder.Attributes</RootNamespace>
+    <PackageId>LogicBuilder.Attributes</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>BlaiseD</Authors>
+    <Description>LogicBuilder.Attributes provides some of the data for automatic configuration of functions, variables and contructors.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>First Release</PackageReleaseNotes>
+    <PackageTags>logic-builder design configuration</PackageTags>
+    <Copyright>Copyright © BPS 2018</Copyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <RepositoryUrl>https://github.com/BlaiseD/LogicBuilderRuntimeComponents</RepositoryUrl>
+    <PackageLicense>https://github.com/BlaiseD/LogicBuilder/blob/master/Licence.MD</PackageLicense>
+    <PackageProjectUrl>https://github.com/BlaiseD/LogicBuilder</PackageProjectUrl>
+    <AssemblyOriginatorKeyFile>..\LogicBuilder.Rules.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="PackNuget.bat" />
+  </ItemGroup>
+
+</Project>

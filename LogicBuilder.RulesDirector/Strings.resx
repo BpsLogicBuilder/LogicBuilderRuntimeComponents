@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+  <data name="defaultErrorMessage" xml:space="preserve">
+    <value>An error has occurred.</value>
+  </data>
+  <data name="displayBoolean" xml:space="preserve">
+    <value>Boolean</value>
+  </data>
+  <data name="displayDateTime" xml:space="preserve">
+    <value>DateTime</value>
+  </data>
+  <data name="displayTimeSpan" xml:space="preserve">
+    <value>TimeSpan</value>
+  </data>
+  <data name="displayDecimal" xml:space="preserve">
+    <value>Decimal</value>
+  </data>
+  <data name="displayByte" xml:space="preserve">
+    <value>Byte</value>
+  </data>
+  <data name="displayInt16" xml:space="preserve">
+    <value>Int16</value>
+  </data>
+  <data name="displayInt32" xml:space="preserve">
+    <value>Int32</value>
+  </data>
+  <data name="displayInt64" xml:space="preserve">
+    <value>Integer</value>
+  </data>
+  <data name="displaySingle" xml:space="preserve">
+    <value>Float</value>
+  </data>
+  <data name="displayDouble" xml:space="preserve">
+    <value>Double</value>
+  </data>
+  <data name="displayString" xml:space="preserve">
+    <value>String</value>
+  </data>
+  <data name="displayChar" xml:space="preserve">
+    <value>Char</value>
+  </data>
+  <data name="displaySByte" xml:space="preserve">
+    <value>SByte</value>
+  </data>
+  <data name="displayGuid" xml:space="preserve">
+    <value>Guid</value>
+  </data>
+  <data name="displayUInt16" xml:space="preserve">
+    <value>UInt16</value>
+  </data>
+  <data name="displayUInt32" xml:space="preserve">
+    <value>UInt32</value>
+  </data>
+  <data name="displayUInt64" xml:space="preserve">
+    <value>UInt64</value>
+  </data>
+  <data name="displayNullableBoolean" xml:space="preserve">
+    <value>NullableBoolean</value>
+  </data>
+  <data name="displayNullableDateTime" xml:space="preserve">
+    <value>NullableDateTime</value>
+  </data>
+  <data name="displayNullableTimeSpan" xml:space="preserve">
+    <value>NullableTimeSpan</value>
+  </data>
+  <data name="displayNullableDecimal" xml:space="preserve">
+    <value>NullableDecimal</value>
+  </data>
+  <data name="displayNullableByte" xml:space="preserve">
+    <value>NullableByte</value>
+  </data>
+  <data name="displayNullableInt16" xml:space="preserve">
+    <value>NullableInt16</value>
+  </data>
+  <data name="displayNullableInt32" xml:space="preserve">
+    <value>NullableInt32</value>
+  </data>
+  <data name="displayNullableInt64" xml:space="preserve">
+    <value>NullableInteger</value>
+  </data>
+  <data name="displayNullableSingle" xml:space="preserve">
+    <value>NullableFloat</value>
+  </data>
+  <data name="displayNullableDouble" xml:space="preserve">
+    <value>NullableDouble</value>
+  </data>
+  <data name="displayNullableChar" xml:space="preserve">
+    <value>NullableChar</value>
+  </data>
+  <data name="displayNullableSByte" xml:space="preserve">
+    <value>NullableSByte</value>
+  </data>
+  <data name="displayNullableGuid" xml:space="preserve">
+    <value>NullableGuid</value>
+  </data>
+  <data name="displayNullableUInt16" xml:space="preserve">
+    <value>NullableUInt16</value>
+  </data>
+  <data name="displayNullableUInt32" xml:space="preserve">
+    <value>NullableUInt32</value>
+  </data>
+  <data name="displayNullableUInt64" xml:space="preserve">
+    <value>NullableUInt64</value>
+  </data>
+  <data name="flowStatusFormat" xml:space="preserve">
+    <value>Module: {0}, Page: {1}, Shape Index: {2}.</value>
+    <comment>0=moduleName 1=pageNumber 2=shapeIndex</comment>
+  </data>
+  <data name="flowStatusFormatInitial" xml:space="preserve">
+    <value>Module: {0}.</value>
+    <comment>0=moduleName</comment>
+  </data>
+  <data name="getFailedNullLiteralFormat" xml:space="preserve">
+    <value>Get {0} variable {1} failed.  Data is null.</value>
+    <comment>0=type; 1=key;</comment>
+  </data>
+  <data name="getFailedInvalidDataFormat" xml:space="preserve">
+    <value>Get {0} variable {1} failed.  Invalid data: {2}.</value>
+    <comment>0=type; 1=key; 2=currentData</comment>
+  </data>
+  <data name="getFailedInvalidTypeFormat" xml:space="preserve">
+    <value>Get {0} variable {1} failed.  The current type is {2}.</value>
+    <comment>0=type; 1=key; 2=currentType</comment>
+  </data>
+  <data name="getResourceFailedInvalidFormat" xml:space="preserve">
+    <value>Get {0} resource {1} failed.  Invalid data: {2}.</value>
+    <comment>0=type; 1=resourceId; 2=resourceData</comment>
+  </data>
+  <data name="getResourceFailedInvalidTypeFormat" xml:space="preserve">
+    <value>Get resource {0} for type "{1}" failed. Invalid type.</value>
+    <comment>0=resourceId; 1=type</comment>
+  </data>
+  <data name="getResourceFailedNotFoundFormat" xml:space="preserve">
+    <value>Get resource {0} failed.  Resource not found.</value>
+  </data>
+  <data name="illegalMethodCallFormat" xml:space="preserve">
+    <value>Illegal use of {0}.</value>
+    <comment>0=methodName</comment>
+  </data>
+  <data name="ruleExecutionCannotBeNull" xml:space="preserve">
+    <value>Rule Execution cannot be null for this operation.</value>
+  </data>
+  <data name="ruleSetCannotBeNull" xml:space="preserve">
+    <value>Rule set cannot be null for this operation.</value>
+  </data>
+  <data name="setFailedInvalidTypeFormat" xml:space="preserve">
+    <value>Set {0} variable {1} failed.  The current type is {2}.</value>
+    <comment>0=type; 1=key; 2=currentType</comment>
+  </data>
+  <data name="variableTypeToStringFormat" xml:space="preserve">
+    <value>{0} ({1})</value>
+    <comment>0=variableName 1=variableType</comment>
+  </data>
+  <data name="invalidArgumentFormat" xml:space="preserve">
+    <value>Argument is invalid {0}.</value>
+    <comment>0=locationID</comment>
+  </data>
+  <data name="getInputFailedInvalidFormat" xml:space="preserve">
+    <value>Get {0} input failed. Index: {1}. Invalid data: {2}.</value>
+    <comment>0=type; 1=index; 2=data present</comment>
+  </data>
+  <data name="getInputFailedNotFoundFormat" xml:space="preserve">
+    <value>Get input failed.  Entry not found. Index: {0}.</value>
+    <comment>0=index</comment>
+  </data>
+  <data name="moduleNotFoundFormat" xml:space="preserve">
+    <value>Module {0} is missing. Reload missing modules and retry your operation.</value>
+    <comment>0=moduleName</comment>
+  </data>
+  <data name="noLicenseMessageFormat" xml:space="preserve">
+    <value>License or license features are not installed. Select BPS Rules/BPS Rules Director/Activate BPS Rules Director from the All Programs menu. {0}.</value>
+    <comment>0=NoLicenseExceptionMessage</comment>
+  </data>
+  <data name="noLicenseFound" xml:space="preserve">
+    <value>No license found.</value>
+  </data>
+  <data name="currentModuleMustBeEmptyFormat" xml:space="preserve">
+    <value>Current module name must be empty {0}.</value>
+    <comment>0=locationID</comment>
+  </data>
+</root>
