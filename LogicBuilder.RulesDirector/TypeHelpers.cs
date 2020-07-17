@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace LogicBuilder.RulesDirector
 {
-    internal static class TypeHelpers
+    public static class TypeHelpers
     {
         internal static bool TryParse(this string toParse, Type type, out object result)
         {
