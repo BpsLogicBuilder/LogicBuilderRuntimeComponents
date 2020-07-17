@@ -4,24 +4,21 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>LogicBuilder.RulesDirector.AspNetCore</RootNamespace>
     <PackageId>LogicBuilder.RulesDirector.AspNetCore</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
     <Authors>BlaiseD</Authors>
     <Description>LogicBuilder.RulesDirector.AspNetCore augments LogicBuilder.RulesDirector with ASP.NET Core with session management for the Logic Builder.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>First release</PackageReleaseNotes>
     <PackageTags>rules execution</PackageTags>
     <Copyright>Copyright © BPS 2018</Copyright>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilderRuntimeComponents</RepositoryUrl>
-    <PackageLicense>https://github.com/BlaiseD/LogicBuilder/blob/master/Licence.MD</PackageLicense>
+    <PackageLicense>https://github.com/BlaiseD/LogicBuilder/blob/master/LICENSE.MD</PackageLicense>
     <PackageProjectUrl>https://github.com/BlaiseD/LogicBuilder</PackageProjectUrl>
     <AssemblyOriginatorKeyFile>..\LogicBuilder.Rules.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.RulesDirector" Version="1.0.0" />
+    <PackageReference Include="LogicBuilder.RulesDirector" Version="1.0.1-preview01" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.0.1" />

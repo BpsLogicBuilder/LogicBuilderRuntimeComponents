@@ -4,17 +4,14 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>LogicBuilder.Forms.Parameters</RootNamespace>
     <PackageId>LogicBuilder.Forms.Parameters</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
     <Authors>BlaiseD</Authors>
     <Description>Wrapper classes for the Input Questions Form Hierarchy and the Connector.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>First Release</PackageReleaseNotes>
     <PackageTags>logic-builder rules standard-forms connector</PackageTags>
     <Copyright>Copyright © BPS 2017</Copyright>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilderRuntimeComponents</RepositoryUrl>
-    <PackageLicense>https://github.com/BlaiseD/LogicBuilder/blob/master/Licence.MD</PackageLicense>
+    <PackageLicense>https://github.com/BlaiseD/LogicBuilder/blob/master/LICENSE.MD</PackageLicense>
     <PackageProjectUrl>https://github.com/BlaiseD/LogicBuilder</PackageProjectUrl>
     <AssemblyOriginatorKeyFile>..\LogicBuilder.Rules.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>

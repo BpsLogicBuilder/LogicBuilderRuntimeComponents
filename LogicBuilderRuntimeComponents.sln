@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2020
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{569CEBAD-7EA1-4AF4-AB18-6ED3F9841FA4}"
 EndProject
@@ -16,6 +16,15 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicBuilder.DataContracts", "LogicBuilder.DataContracts\LogicBuilder.DataContracts.csproj", "{7A5A6DD8-0FFA-44AA-A919-70EFEB27A7EA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicBuilder.Attributes", "LogicBuilder.Attributes\LogicBuilder.Attributes.csproj", "{C859367A-1D16-462C-A413-4B8F2746F4A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A7866B81-0B15-4242-97B7-27834262CF09}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+		Directory.Build.props = Directory.Build.props
+		.github\workflows\release.yml = .github\workflows\release.yml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RulesDirector.Tests", "RulesDirector.Tests\RulesDirector.Tests.csproj", "{D04436C3-A9BD-4C31-AFB8-6B27D99130A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +52,10 @@ Global
 		{C859367A-1D16-462C-A413-4B8F2746F4A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C859367A-1D16-462C-A413-4B8F2746F4A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C859367A-1D16-462C-A413-4B8F2746F4A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D04436C3-A9BD-4C31-AFB8-6B27D99130A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D04436C3-A9BD-4C31-AFB8-6B27D99130A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D04436C3-A9BD-4C31-AFB8-6B27D99130A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D04436C3-A9BD-4C31-AFB8-6B27D99130A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +66,7 @@ Global
 		{3F3B9B10-B58A-4A28-921E-D502139BE1C2} = {569CEBAD-7EA1-4AF4-AB18-6ED3F9841FA4}
 		{7A5A6DD8-0FFA-44AA-A919-70EFEB27A7EA} = {569CEBAD-7EA1-4AF4-AB18-6ED3F9841FA4}
 		{C859367A-1D16-462C-A413-4B8F2746F4A0} = {569CEBAD-7EA1-4AF4-AB18-6ED3F9841FA4}
+		{D04436C3-A9BD-4C31-AFB8-6B27D99130A9} = {3678EA74-73BB-40DE-A5D4-CA6060CA2E00}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {53569B07-D458-423A-915F-7A9ECCB00535}
