@@ -56,7 +56,7 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
 
-      - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.RulesDirector.AspNetCore'
+    - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.RulesDirector.AspNetCore'
     - name: Pack and push
       run: ./CI_Pack_Push.ps1
       shell: pwsh
