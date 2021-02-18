@@ -18,8 +18,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.Forms.Parameters" Version="1.0.1-preview02" />
-    <PackageReference Include="LogicBuilder.Workflow.Activities.Rules" Version="1.0.0" />
+    <PackageReference Include="LogicBuilder.Forms.Parameters" Version="1.0.1-zPreview.0.1" />
+    <PackageReference Include="LogicBuilder.Workflow.Activities.Rules" Version="1.0.2" />
+    <PackageReference Include="MinVer" Version="2.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>

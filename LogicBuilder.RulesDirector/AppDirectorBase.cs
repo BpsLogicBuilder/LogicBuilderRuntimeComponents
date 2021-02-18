@@ -118,8 +118,7 @@ namespace LogicBuilder.RulesDirector
             if (string.IsNullOrEmpty(module))
                 throw new ArgumentException(Strings.ruleSetCannotBeNull);
 
-            if (!string.IsNullOrEmpty(this._moduleBeginName))
-                throw new DirectorException(string.Format(CultureInfo.CurrentCulture, Strings.currentModuleMustBeEmptyFormat, "{55D1773B-EBD4-4F8C-A161-815674E9F4A0}"));
+            ClearFlowVariables();
 
             UpdateProgressList(module);
 

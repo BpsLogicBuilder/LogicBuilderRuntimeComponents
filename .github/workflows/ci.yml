@@ -13,6 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
@@ -23,27 +26,31 @@ jobs:
 
     - name: Set Variables
       run: |
-        echo '::set-env name=VERSION_NUMBER::1.0.1-preview02'
-        echo '::set-env name=REPO::${{ github.repository }}'
-        echo '::set-env name=REPO_OWNER::${{ github.repository_owner }}'
+        echo "GITHUB_NUGET_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
+        echo "REPO=${{ github.repository }}" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
+        echo "REPO_OWNER=${{ github.repository_owner }}" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
 
-    - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.Attributes'
-    - name: Build and Push
+    - name: Build and Push LogicBuilder.Attributes
+      env:
+        PROJECT_NAME: LogicBuilder.Attributes
       run: ./CI_Build_Push.ps1
       shell: pwsh
 
-    - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.DataContracts'
-    - name: Build and Push
+    - name: Build and Push LogicBuilder.DataContracts
+      env:
+        PROJECT_NAME: LogicBuilder.DataContracts
       run: ./CI_Build_Push.ps1
       shell: pwsh
 
-    - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.Forms.Parameters'
-    - name: Build and Push
+    - name: Build and Push LogicBuilder.Forms.Parameters
+      env:
+        PROJECT_NAME: LogicBuilder.Forms.Parameters
       run: ./CI_Build_Push.ps1
       shell: pwsh
 
-    - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.RulesDirector'
-    - name: Build and Push
+    - name: Build and Push LogicBuilder.RulesDirector
+      env:
+        PROJECT_NAME: LogicBuilder.RulesDirector
       run: ./CI_Build_Push.ps1
       shell: pwsh
 
@@ -56,7 +63,8 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
 
-    - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.RulesDirector.AspNetCore'
-    - name: Pack and push
+    - name: Pack and push LogicBuilder.RulesDirector.AspNetCore
+      env:
+        PROJECT_NAME: LogicBuilder.RulesDirector.AspNetCore
       run: ./CI_Pack_Push.ps1
       shell: pwsh

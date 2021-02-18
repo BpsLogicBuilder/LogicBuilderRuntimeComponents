@@ -201,9 +201,8 @@ namespace LogicBuilder.RulesDirector.AspNetCore
             if (string.IsNullOrEmpty(module))
                 throw new ArgumentException(Strings.ruleSetCannotBeNull);
 
-
-            if (!string.IsNullOrEmpty(this._moduleBeginName))
-                throw new DirectorException(string.Format(CultureInfo.CurrentCulture, Strings.currentModuleMustBeEmptyFormat, "{1BEEE2A5-D9EC-4B67-8F76-B161EF631C1C}"));
+            ClearFlowVariables();
+            ClearFlowSessionVariables();
 
             UpdateProgressList(module);
 
