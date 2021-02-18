@@ -19,7 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.RulesDirector" Version="1.0.1-zPreview.0.1" />
+    <PackageReference Include="LogicBuilder.RulesDirector" Version="1.0.1-zzz.1" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.0.1" />
