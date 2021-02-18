@@ -59,5 +59,6 @@ namespace LogicBuilder.RulesDirector
         /// </summary>
         /// <param name="form"></param>
         void DisplayInputQuestions(InputFormParameters form, ICollection<ConnectorParameters> shortValues = null);
+
     }
 }
