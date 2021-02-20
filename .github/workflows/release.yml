@@ -30,6 +30,30 @@ jobs:
         echo "REPO=${{ github.repository }}" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
         echo "REPO_OWNER=${{ github.repository_owner }}" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
 
+    - name: Pack and push LogicBuilder.Attributes
+      env:
+        PROJECT_NAME: LogicBuilder.Attributes
+      run: ./Release_Build_Push.ps1
+      shell: pwsh
+
+    - name: Pack and push LogicBuilder.DataContracts
+      env:
+        PROJECT_NAME: LogicBuilder.DataContracts
+      run: ./Release_Build_Push.ps1
+      shell: pwsh
+
+    - name: Pack and push LogicBuilder.Forms.Parameters
+      env:
+        PROJECT_NAME: LogicBuilder.Forms.Parameters
+      run: ./Release_Build_Push.ps1
+      shell: pwsh
+
+    - name: Pack and push LogicBuilder.RulesDirector
+      env:
+        PROJECT_NAME: LogicBuilder.RulesDirector
+      run: ./Release_Build_Push.ps1
+      shell: pwsh
+
     - name: Restore
       run: dotnet restore
 
@@ -38,30 +62,6 @@ jobs:
 
     - name: Test
       run: dotnet test --no-restore --verbosity normal
-
-    - name: Pack and push LogicBuilder.Attributes
-      env:
-        PROJECT_NAME: LogicBuilder.Attributes
-      run: ./Release_Pack_Push.ps1
-      shell: pwsh
-
-    - name: Pack and push LogicBuilder.DataContracts
-      env:
-        PROJECT_NAME: LogicBuilder.DataContracts
-      run: ./Release_Pack_Push.ps1
-      shell: pwsh
-
-    - name: Pack and push LogicBuilder.Forms.Parameters
-      env:
-        PROJECT_NAME: LogicBuilder.Forms.Parameters
-      run: ./Release_Pack_Push.ps1
-      shell: pwsh
-
-    - name: Pack and push LogicBuilder.RulesDirector
-      env:
-        PROJECT_NAME: LogicBuilder.RulesDirector
-      run: ./Release_Pack_Push.ps1
-      shell: pwsh
 
     - name: Pack and push LogicBuilder.RulesDirector.AspNetCore
       env:
