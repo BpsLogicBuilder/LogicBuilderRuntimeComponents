@@ -1,6 +1,3 @@
-/*Copyright © 2009 by Bonamy Taylor
- * */
-using LogicBuilder.Workflow.Activities.Rules;
 using System;
 using System.Collections;
 using System.Collections.Generic;

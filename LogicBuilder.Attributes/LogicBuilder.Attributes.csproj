@@ -7,7 +7,7 @@
     <Authors>BlaiseD</Authors>
     <Description>LogicBuilder.Attributes provides some of the data for automatic configuration of functions, variables and contructors.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>First Release</PackageReleaseNotes>
+    <PackageReleaseNotes>Clearing out flow variables on start.</PackageReleaseNotes>
     <PackageTags>logic-builder design configuration</PackageTags>
     <Copyright>Copyright © BPS 2018</Copyright>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilderRuntimeComponents</RepositoryUrl>

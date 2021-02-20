@@ -7,7 +7,7 @@
     <Authors>BlaiseD</Authors>
     <Description>Wrapper classes for the Input Questions Form Hierarchy and the Connector.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>First Release</PackageReleaseNotes>
+    <PackageReleaseNotes>Clearing out flow variables on start.</PackageReleaseNotes>
     <PackageTags>logic-builder rules standard-forms connector</PackageTags>
     <Copyright>Copyright © BPS 2017</Copyright>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilderRuntimeComponents</RepositoryUrl>
