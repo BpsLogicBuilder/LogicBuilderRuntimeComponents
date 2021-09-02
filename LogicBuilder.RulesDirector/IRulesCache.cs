@@ -1,5 +1,4 @@
 using LogicBuilder.Workflow.Activities.Rules;
-using System;
 using System.Collections.Generic;
 
 namespace LogicBuilder.RulesDirector
@@ -8,8 +7,8 @@ namespace LogicBuilder.RulesDirector
     {
         RuleEngine GetRuleEngine(string ruleSet);
 
-        Dictionary<string, RuleEngine> RuleEngines { get; }
+        IDictionary<string, RuleEngine> RuleEngines { get; }
 
-        Dictionary<string, string> ResourceStrings { get; }
+        IDictionary<string, string> ResourceStrings { get; }
     }
 }
