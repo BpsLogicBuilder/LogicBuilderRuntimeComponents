@@ -1,4 +1,5 @@
 ﻿using LogicBuilder.Attributes;
+using System.Threading.Tasks;
 
 namespace Contoso.Test.Flow
 {
@@ -6,5 +7,8 @@ namespace Contoso.Test.Flow
     {
         [AlsoKnownAs("WriteToLog")]
         void WriteToLog(string message);
+
+        [AlsoKnownAs("SetValueAync")]
+        Task SetValueAync(string key, object value);
     }
 }
