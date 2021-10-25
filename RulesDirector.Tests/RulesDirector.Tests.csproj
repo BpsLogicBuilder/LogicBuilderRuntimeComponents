@@ -2,8 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyOriginatorKeyFile>..\LogicBuilder.Rules.snk</AssemblyOriginatorKeyFile>
-    <SignAssembly>true</SignAssembly>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
