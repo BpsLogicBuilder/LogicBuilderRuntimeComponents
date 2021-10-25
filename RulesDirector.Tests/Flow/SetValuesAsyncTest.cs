@@ -25,24 +25,24 @@ namespace RulesDirector.Tests.Flow
         private readonly ITestOutputHelper output;
         #endregion Fields
 
-        [Fact]
-        public void SetValues()
-        {
-            //arrange
-            IFlowManager flowManager = serviceProvider.GetRequiredService<IFlowManager>();
+        //[Fact]
+        //public void SetValues()
+        //{
+        //    //arrange
+        //    IFlowManager flowManager = serviceProvider.GetRequiredService<IFlowManager>();
 
-            //act
-            System.Diagnostics.Stopwatch stopWatch = System.Diagnostics.Stopwatch.StartNew();
-            flowManager.Start("setvaluesasync");
-            stopWatch.Stop();
-            this.output.WriteLine("Setting values async  = {0}", stopWatch.Elapsed.TotalMilliseconds);
+        //    //act
+        //    System.Diagnostics.Stopwatch stopWatch = System.Diagnostics.Stopwatch.StartNew();
+        //    flowManager.Start("setvaluesasync");
+        //    stopWatch.Stop();
+        //    this.output.WriteLine("Setting values async  = {0}", stopWatch.Elapsed.TotalMilliseconds);
 
-            //assert
-            Assert.Equal("A", flowManager.FlowDataCache.Items["A"].ToString());
-            Assert.Equal("B", flowManager.FlowDataCache.Items["B"].ToString());
-            Assert.Equal("C", flowManager.FlowDataCache.Items["C"].ToString());
-            Assert.True(flowManager.FlowDataCache.Response.Success);
-        }
+        //    //assert
+        //    Assert.Equal("A", flowManager.FlowDataCache.Items["A"].ToString());
+        //    Assert.Equal("B", flowManager.FlowDataCache.Items["B"].ToString());
+        //    Assert.Equal("C", flowManager.FlowDataCache.Items["C"].ToString());
+        //    Assert.True(flowManager.FlowDataCache.Response.Success);
+        //}
 
         #region Helpers
         private void Initialize()
