@@ -14,6 +14,8 @@
     <None Remove="Rulesets\saveinstructor.resources" />
     <None Remove="Rulesets\savestudent.module" />
     <None Remove="Rulesets\savestudent.resources" />
+    <None Remove="Rulesets\setvaluesasync.module" />
+    <None Remove="Rulesets\setvaluesasync.resources" />
     <None Remove="Rulesets\validatecourse.module" />
     <None Remove="Rulesets\validatecourse.resources" />
     <None Remove="Rulesets\validatedepartment.module" />
@@ -34,6 +36,8 @@
     <EmbeddedResource Include="Rulesets\saveinstructor.resources" />
     <EmbeddedResource Include="Rulesets\savestudent.module" />
     <EmbeddedResource Include="Rulesets\savestudent.resources" />
+    <EmbeddedResource Include="Rulesets\setvaluesasync.module" />
+    <EmbeddedResource Include="Rulesets\setvaluesasync.resources" />
     <EmbeddedResource Include="Rulesets\validatecourse.module" />
     <EmbeddedResource Include="Rulesets\validatecourse.resources" />
     <EmbeddedResource Include="Rulesets\validatedepartment.module" />

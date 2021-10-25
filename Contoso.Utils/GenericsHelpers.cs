@@ -11,6 +11,10 @@ namespace Contoso.Utils
         [FunctionGroup(FunctionGroup.Standard)]
         public static List<T> ToList(IEnumerable<T> enumerable) => enumerable.ToList();
 
+        [AlsoKnownAs("ToArray")]
+        [FunctionGroup(FunctionGroup.Standard)]
+        public static T[] ToArray(IEnumerable<T> enumerable) => enumerable.ToArray();
+
         [AlsoKnownAs("Single")]
         [FunctionGroup(FunctionGroup.Standard)]
         public static T Single(IEnumerable<T> enumerable) => enumerable.Single();
