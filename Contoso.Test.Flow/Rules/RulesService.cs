@@ -16,6 +16,41 @@ namespace Contoso.Test.Flow.Rules
             return await LoadRules(new RulesLoader());
         }
 
+        public static RulesCache LoadRulesSync(IRulesLoader rulesLoader)
+        {
+            RulesCache cache = new RulesCache(new ConcurrentDictionary<string, RuleEngine>(), new ConcurrentDictionary<string, string>());
+
+            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(FlowActivity)).Assembly;
+            string[] embeddedResources = GetResourceNames(assembly);
+
+            Dictionary<string, string> rules = embeddedResources
+                                                .Where(f => f.EndsWith(".module"))
+                                                .ToDictionary(f => GetKey(f).ToLowerInvariant());
+
+            Dictionary<string, string> resources = embeddedResources
+                                                .Where(f => f.EndsWith(".resources"))
+                                                .ToDictionary(f => GetKey(f).ToLowerInvariant());
+
+            foreach (var key in rules.Keys)
+            {
+                rulesLoader.LoadRules
+                (
+                    new RulesModuleModel
+                    {
+                        Name = key,
+                        ResourceSetFile = GetBytes(resources[key], assembly),
+                        RuleSetFile = GetBytes(rules[key], assembly)
+                    },
+                    cache
+                );
+            }
+
+            return cache;
+
+            string GetKey(string fullResourceName)
+                => Path.GetExtension(Path.GetFileNameWithoutExtension(fullResourceName)).Substring(1);
+        }
+
         static async Task<RulesCache> LoadRules(IRulesLoader rulesLoader)
         {
             RulesCache cache = new RulesCache(new ConcurrentDictionary<string, RuleEngine>(), new ConcurrentDictionary<string, string>());
