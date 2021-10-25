@@ -25,7 +25,7 @@ namespace RulesDirector.Tests.Flow
                 typeof(string).Assembly
             };
 
-            rulesCache = RulesService.LoadRules().Result;
+            rulesCache = RulesService.LoadRulesSync(new RulesLoader());
             this.output = output;
             Initialize();
         }
