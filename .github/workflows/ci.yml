@@ -61,7 +61,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
 
     - name: Test
-      run: dotnet test --no-restore --verbosity normal --filter "RulesDirector.Tests.AssignableTests|RulesDirector.Tests.Flow.SaveCourseTest|RulesDirector.Tests.Flow.SaveDepartmentTest"
+      run: dotnet test --no-restore --verbosity normal
 
     - name: Pack and push LogicBuilder.RulesDirector.AspNetCore
       env:

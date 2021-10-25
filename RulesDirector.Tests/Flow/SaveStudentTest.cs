@@ -103,7 +103,7 @@ namespace RulesDirector.Tests.Flow
                 .AddSingleton<Progress, Progress>()
                 .AddSingleton<IRulesCache>(sp =>
                 {
-                    return RulesService.LoadRules().GetAwaiter().GetResult();
+                    return RulesService.LoadRulesSync(new RulesLoader());
                 })
                 .BuildServiceProvider();
         }
