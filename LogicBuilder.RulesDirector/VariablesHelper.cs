@@ -5,6 +5,7 @@ using System.Text;
 
 namespace LogicBuilder.RulesDirector
 {
+    [Obsolete]
     public static class VariablesHelper<T>
     {
         public static T GetVariable(string key, DirectorBase director)

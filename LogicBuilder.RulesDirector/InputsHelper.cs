@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Globalization;
 
 namespace LogicBuilder.RulesDirector
 {
+    [Obsolete]
     public static class InputsHelper<T>
     {
         public static T GetInput(DirectorBase director, int index)

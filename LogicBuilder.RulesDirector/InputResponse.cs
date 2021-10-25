@@ -3,6 +3,7 @@ using System;
 namespace LogicBuilder.RulesDirector
 {
     [Serializable]
+    [Obsolete]
     public class InputResponse
     {
         public InputResponse(object answer, bool unanswered, Type type)

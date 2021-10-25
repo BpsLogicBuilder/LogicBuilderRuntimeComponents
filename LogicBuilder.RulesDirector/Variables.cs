@@ -5,6 +5,7 @@ using System.Globalization;
 namespace LogicBuilder.RulesDirector
 {
     [Serializable()]
+    [Obsolete]
     public class Variables
     {
         public Variables()

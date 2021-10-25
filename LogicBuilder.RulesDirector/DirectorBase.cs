@@ -138,6 +138,7 @@ namespace LogicBuilder.RulesDirector
         /// Gets or sets a value indicating whether the form invoked
         /// by a Dialog Function is closed
         /// </summary>
+        [Obsolete]
         public bool DialogClosed
         {
             get { return _dialogClosed; }
@@ -177,6 +178,7 @@ namespace LogicBuilder.RulesDirector
         /// When overridden, holds a list of responses for each question in the current question list.
         /// TKey is the questionID and TValue is the responseID for the answer.
         /// </summary>
+        [Obsolete]
         protected abstract Dictionary<int, int> QuestionListAnswers
         {
             get;
@@ -186,6 +188,7 @@ namespace LogicBuilder.RulesDirector
         /// When overridden, holds a list of responses for each question in the current input question list.
         /// TKey is the questionID and TValue is the response entered by the user at runtime.
         /// </summary>
+        [Obsolete]
         protected internal abstract Dictionary<int, object> InputQuestionsAnswers
         {
             get;
@@ -195,6 +198,7 @@ namespace LogicBuilder.RulesDirector
         /// Gets or sets the automatic variables set i.e. the properties that do
         /// not have to be implemented by the developer.
         /// </summary>
+        [Obsolete]
         protected internal abstract Variables Variables
         {
             get;
@@ -278,6 +282,7 @@ namespace LogicBuilder.RulesDirector
         /// <param name="questionId"></param>
         /// <param name="answerId"></param>
         /// <returns></returns>
+        [Obsolete]
         public bool AnswerSelected(int questionId, int answerId)
         {
             if (!QuestionListAnswers.TryGetValue(questionId, out int answerIdStored))
@@ -294,6 +299,7 @@ namespace LogicBuilder.RulesDirector
         /// <param name="questionId"></param>
         /// <param name="answerId"></param>
         /// <returns></returns>
+        [Obsolete]
         public bool InputAnswerExists(int questionId)
         {
             return InputQuestionsAnswers.ContainsKey(questionId);
@@ -305,6 +311,7 @@ namespace LogicBuilder.RulesDirector
         /// Empties the Dictionary<int, int> holding the questionId (TKey) and the
         /// corresponding answerId (TValue).
         /// </summary>
+        [Obsolete]
         public void ClearQuestionListAnswers()
         {
             QuestionListAnswers.Clear();
@@ -316,6 +323,7 @@ namespace LogicBuilder.RulesDirector
         /// Empties the Dictionary<int, object> holding the questionId (TKey) and the
         /// corresponding response (TValue).
         /// </summary>
+        [Obsolete]
         public void ClearInputQuestionsAnswers()
         {
             InputQuestionsAnswers.Clear();
@@ -350,6 +358,7 @@ namespace LogicBuilder.RulesDirector
         /// adds the variables to the automatic variables set
         /// </summary>
         /// <param name="values"></param>
+        [Obsolete]
         protected void SetVariableValues(Dictionary<string, VariableInfo> values)
         {
             Variables.SetValues(values);
@@ -412,6 +421,7 @@ namespace LogicBuilder.RulesDirector
         /// Sets DialogClosed to true and sets the answers from the question form
         /// </summary>
         /// <param name="answers"></param>
+        [Obsolete]
         public void AnswerQuestions(Dictionary<int, int> answers)
         {
             DialogClosed = true;
@@ -424,6 +434,7 @@ namespace LogicBuilder.RulesDirector
         /// Sets DialogClosed to true and sets the answers from the question form
         /// </summary>
         /// <param name="answers"></param>
+        [Obsolete]
         public void AnswerQuestions(Dictionary<int, int> answers, string selection)
         {
             Selection = selection;
@@ -436,6 +447,7 @@ namespace LogicBuilder.RulesDirector
         /// Sets DialogClosed to true and sets the answers from the input question form
         /// </summary>
         /// <param name="answers"></param>
+        [Obsolete]
         public void AnswerInputQuestions(Dictionary<int, InputResponse> answers)
         {
             DialogClosed = true;
@@ -456,6 +468,7 @@ namespace LogicBuilder.RulesDirector
         /// Sets DialogClosed to true and sets the answers from the input question form
         /// </summary>
         /// <param name="answers"></param>
+        [Obsolete]
         public void AnswerInputQuestions(Dictionary<int, InputResponse> answers, string selection)
         {
             Selection = selection;
@@ -476,6 +489,7 @@ namespace LogicBuilder.RulesDirector
         /// Sets DialogClosed to true, updates the variables from the Update Variables Form, and executes the rules engine
         /// </summary>
         /// <param name="variables"></param>
+        [Obsolete]
         public void UpdateVariables(Dictionary<string, VariableInfo> variables)
         {
             DialogClosed = true;
@@ -485,6 +499,7 @@ namespace LogicBuilder.RulesDirector
         /// <summary>
         /// Sets DialogClosed to true and executes the rules engine
         /// </summary>
+        [Obsolete]
         public void CloseDialog()
         {
             DialogClosed = true;
