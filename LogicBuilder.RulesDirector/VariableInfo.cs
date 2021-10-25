@@ -4,6 +4,7 @@ using System.Globalization;
 namespace LogicBuilder.RulesDirector
 {
     [Serializable]
+    [Obsolete]
     public class VariableInfo : IEquatable<VariableInfo>, IComparable<VariableInfo>
     {
         public VariableInfo(string variableName, string variableType, object variableValue)

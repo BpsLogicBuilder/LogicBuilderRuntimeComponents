@@ -40,6 +40,7 @@ namespace LogicBuilder.RulesDirector
             get { return selection; }
         }
 
+        [Obsolete]
         internal bool DialogClosed
         {
             get { return dialogClosed; }
