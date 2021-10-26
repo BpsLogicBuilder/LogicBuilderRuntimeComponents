@@ -5,9 +5,9 @@
     <RootNamespace>LogicBuilder.Forms.Parameters</RootNamespace>
     <PackageId>LogicBuilder.Forms.Parameters</PackageId>
     <Authors>BlaiseD</Authors>
-    <Description>Wrapper classes for the Input Questions Form Hierarchy and the Connector.</Description>
+    <Description>Wrapper class for the Connector Shape.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Clearing out flow variables on start.</PackageReleaseNotes>
+    <PackageReleaseNotes>Removing obsolete RulesDirector members.</PackageReleaseNotes>
     <PackageTags>logic-builder rules standard-forms connector</PackageTags>
     <Copyright>Copyright © BPS 2017</Copyright>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilderRuntimeComponents</RepositoryUrl>

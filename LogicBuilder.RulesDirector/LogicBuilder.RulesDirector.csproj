@@ -7,7 +7,7 @@
     <Authors>BlaiseD</Authors>
     <Description>LogicBuilder.RulesDirector manages the state of the flow for the Logic Builder, including switching between rule engines, and keeping track of the current location as the rules are evaluated.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Clearing out flow variables on start.</PackageReleaseNotes>
+    <PackageReleaseNotes>Removing obsolete RulesDirector members.</PackageReleaseNotes>
     <PackageTags>rules execution</PackageTags>
     <Copyright>Copyright © BPS 2017</Copyright>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilderRuntimeComponents</RepositoryUrl>
@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.Forms.Parameters" Version="1.0.3" />
+    <PackageReference Include="LogicBuilder.Forms.Parameters" Version="2.0.0" />
     <PackageReference Include="LogicBuilder.Workflow.Activities.Rules" Version="2.0.0" />
     <PackageReference Include="MinVer" Version="2.3.0">
       <PrivateAssets>all</PrivateAssets>
