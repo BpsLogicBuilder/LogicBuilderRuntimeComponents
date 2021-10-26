@@ -18,7 +18,6 @@ namespace LogicBuilder.RulesDirector.AspNetCore
         #region Session Variable Names
         private const string SELECTION = "{2B83648C-B5A2-49e0-9467-0AB18737EAE0}";
         private const string DRIVER = "{77D313E2-2CA1-439e-9E31-D34E554E172D}";
-        private const string DIALOGCLOSED = "{5E9BE4B6-6284-477f-81F3-D3D568B9721A}";
         private const string ISLICENSED = "{E86A136E-86B4-4ACF-B812-F7E9BD588C1B}";
         private const string CALLINGMODULEDRIVERSTACK = "{FD327E76-1AEF-4d37-971C-FEDB3265A1FA}";
         private const string CALLINGMODULESTACK = "{9718660D-269D-4d33-A71E-61BF58C5A0B4}";
@@ -99,12 +98,6 @@ namespace LogicBuilder.RulesDirector.AspNetCore
                 return session.Get<string>(MODULEENDNAME);
             }
             set { session.Set<string>(MODULEENDNAME, value); }
-        }
-
-        protected sealed override bool _dialogClosed
-        {
-            get { return session.Get<bool>(CALLINGMODULEDRIVERSTACK); }
-            set { session.Set<bool>(CALLINGMODULEDRIVERSTACK, value); }
         }
         #endregion Private Properties
 
@@ -229,7 +222,6 @@ namespace LogicBuilder.RulesDirector.AspNetCore
             session.Set<Stack>(CALLINGMODULESTACK, null);
             session.Set<string>(MODULEBEGINNAME, null);
             session.Set<string>(MODULEENDNAME, null);
-            session.Set<bool>(DIALOGCLOSED, false);
         }
         #endregion Methods
     }
