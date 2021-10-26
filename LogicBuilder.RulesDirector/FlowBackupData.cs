@@ -8,11 +8,10 @@ namespace LogicBuilder.RulesDirector
     [Serializable]
     public class FlowBackupData : IEquatable<FlowBackupData>
     {
-        internal FlowBackupData(string driver, string selection, bool dialogClosed, Stack callingModuleDriverStack, Stack callingModuleStack, string moduleBeginName, string moduleEndName)
+        internal FlowBackupData(string driver, string selection, Stack callingModuleDriverStack, Stack callingModuleStack, string moduleBeginName, string moduleEndName)
         {
             this.driver = driver;
             this.selection = selection;
-            this.dialogClosed = dialogClosed;
             this.callingModuleDriverStack = callingModuleDriverStack;
             this.callingModuleStack = callingModuleStack;
             this.moduleBeginName = moduleBeginName;
@@ -22,7 +21,6 @@ namespace LogicBuilder.RulesDirector
         #region Variables
         private string driver;
         private string selection;
-        private bool dialogClosed;
         private Stack callingModuleDriverStack;
         private Stack callingModuleStack;
         private string moduleBeginName;
@@ -38,12 +36,6 @@ namespace LogicBuilder.RulesDirector
         internal string Selection
         {
             get { return selection; }
-        }
-
-        [Obsolete]
-        internal bool DialogClosed
-        {
-            get { return dialogClosed; }
         }
 
         internal Stack CallingModuleDriverStack
@@ -80,12 +72,7 @@ namespace LogicBuilder.RulesDirector
             if (this.GetType() != obj.GetType())
                 return false;
 
-            FlowBackupData other = (FlowBackupData)obj;
-            return this.driver == other.driver
-                && this.selection == other.selection
-                && this.dialogClosed == other.dialogClosed
-                && this.moduleBeginName == other.moduleBeginName
-                && this.moduleEndName == other.moduleEndName;
+            return this.Equals((FlowBackupData)obj);
         }
         #endregion Methods
 
@@ -97,7 +84,6 @@ namespace LogicBuilder.RulesDirector
 
             return this.driver == other.driver
                 && this.selection == other.selection
-                && this.dialogClosed == other.dialogClosed
                 && this.moduleBeginName == other.moduleBeginName
                 && this.moduleEndName == other.moduleEndName;
         }

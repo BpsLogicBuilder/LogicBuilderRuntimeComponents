@@ -24,13 +24,29 @@ namespace LogicBuilder.RulesDirector
             if (type.IsNullable())
                 type = Nullable.GetUnderlyingType(type);
 
-            MethodInfo method = type.GetMethods().Single(s => s.Name == "TryParse" && s.GetParameters().Length == 2);
+            MethodInfo method = type.GetMethods().SingleOrDefault(IsTryParseMethod);
+
+            if (method == null)
+            {
+                result = null;
+                return false;
+            }
 
             object[] args = new object[] { toParse, null };
             bool success = (bool)method.Invoke(null, args);
             result = success ? args[1] : null;
 
             return success;
+
+            bool IsTryParseMethod(MethodInfo method)
+            {
+                if (method.Name != "TryParse") return false;
+                ParameterInfo[] parameters = method.GetParameters();
+                return parameters.Length == 2
+                    && parameters[0].ParameterType == typeof(string)
+                    && parameters[1].IsOut
+                    && parameters[1].ParameterType.GetElementType() == type;
+            }
         }
 
         internal static bool CanBeAssignedNull(this Type type) 

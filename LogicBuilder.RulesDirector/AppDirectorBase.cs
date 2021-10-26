@@ -7,9 +7,6 @@ namespace LogicBuilder.RulesDirector
 {
     abstract public class AppDirectorBase : DirectorBase
     {
-        #region Variables
-        #endregion Variables
-
         #region Private Properties
         protected sealed override string _driver { get; set; } = string.Empty;
 
@@ -22,8 +19,6 @@ namespace LogicBuilder.RulesDirector
         protected sealed override string _moduleBeginName { get; set; } = string.Empty;
 
         protected sealed override string _moduleEndName { get; set; } = string.Empty;
-
-        protected sealed override bool _dialogClosed { get; set; }
         #endregion Private Properties
 
         #region Properties

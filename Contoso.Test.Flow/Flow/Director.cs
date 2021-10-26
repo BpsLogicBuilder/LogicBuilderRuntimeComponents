@@ -21,9 +21,6 @@ namespace Contoso.Test.Flow
         protected override IRulesCache RulesCache => this.rulesCache;
         protected override IFlowActivity FlowActivity => this.flowManager.FlowActivity;
         protected override Progress Progress => this.flowManager.Progress;
-        protected override Dictionary<int, int> QuestionListAnswers => throw new NotImplementedException();
-        protected override Dictionary<int, object> InputQuestionsAnswers => throw new NotImplementedException();
-        protected override Variables Variables => throw new NotImplementedException();
         #endregion Properties
 
         public override void SetCurrentBusinessBackupData() => this.flowManager.SetCurrentBusinessBackupData();

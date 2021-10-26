@@ -70,14 +70,6 @@ namespace LogicBuilder.RulesDirector
             get;
             set;
         }
-
-        //dialogClosed
-        [CLSCompliant(false)]
-        protected virtual bool _dialogClosed
-        {
-            get;
-            set;
-        }
         #endregion Flow Properties
 
         #region Rule Activation Properties
@@ -131,22 +123,6 @@ namespace LogicBuilder.RulesDirector
             get;
             set;
         }
-
-        /// <summary>
-        /// This property is used by the auto-generated rules and should
-        /// not be used otherwise.
-        /// Gets or sets a value indicating whether the form invoked
-        /// by a Dialog Function is closed
-        /// </summary>
-        [Obsolete]
-        public bool DialogClosed
-        {
-            get { return _dialogClosed; }
-            set
-            {
-                _dialogClosed = value;
-            }
-        }
         #endregion Rule Activation Properties
 
         #region Other Flow Properties
@@ -172,37 +148,6 @@ namespace LogicBuilder.RulesDirector
         protected abstract Progress Progress
         {
             get;
-        }
-
-        /// <summary>
-        /// When overridden, holds a list of responses for each question in the current question list.
-        /// TKey is the questionID and TValue is the responseID for the answer.
-        /// </summary>
-        [Obsolete]
-        protected abstract Dictionary<int, int> QuestionListAnswers
-        {
-            get;
-        }
-
-        /// <summary>
-        /// When overridden, holds a list of responses for each question in the current input question list.
-        /// TKey is the questionID and TValue is the response entered by the user at runtime.
-        /// </summary>
-        [Obsolete]
-        protected internal abstract Dictionary<int, object> InputQuestionsAnswers
-        {
-            get;
-        }
-
-        /// <summary>
-        /// Gets or sets the automatic variables set i.e. the properties that do
-        /// not have to be implemented by the developer.
-        /// </summary>
-        [Obsolete]
-        protected internal abstract Variables Variables
-        {
-            get;
-            //set;
         }
         #endregion Other Flow Properties
 
@@ -268,67 +213,12 @@ namespace LogicBuilder.RulesDirector
         {
             get
             {
-                return new FlowBackupData(_driver, _selection, _dialogClosed, CopyStack(_callingModuleDriverStack), CopyStack(_callingModuleStack), _moduleBeginName, _moduleEndName);
+                return new FlowBackupData(_driver, _selection, CopyStack(_callingModuleDriverStack), CopyStack(_callingModuleStack), _moduleBeginName, _moduleEndName);
             }
         }
         #endregion Status Properties
 
         #region Methods
-        /// <summary>
-        /// This method is used by the auto-generated rules and should
-        /// not be used otherwise. Given a questionId and answerId, determines
-        /// whether the corresponding answer was selected by the runtime user.
-        /// </summary>
-        /// <param name="questionId"></param>
-        /// <param name="answerId"></param>
-        /// <returns></returns>
-        [Obsolete]
-        public bool AnswerSelected(int questionId, int answerId)
-        {
-            if (!QuestionListAnswers.TryGetValue(questionId, out int answerIdStored))
-                return false;
-
-            return answerIdStored == answerId;
-        }
-
-        /// <summary>
-        /// This method is used by the auto-generated rules and should
-        /// not be used otherwise. Given a questionId, determines
-        /// whether the corresponding answer is present.
-        /// </summary>
-        /// <param name="questionId"></param>
-        /// <param name="answerId"></param>
-        /// <returns></returns>
-        [Obsolete]
-        public bool InputAnswerExists(int questionId)
-        {
-            return InputQuestionsAnswers.ContainsKey(questionId);
-        }
-
-        /// <summary>
-        /// This method is used by the auto-generated rules and should
-        /// not be used otherwise.
-        /// Empties the Dictionary<int, int> holding the questionId (TKey) and the
-        /// corresponding answerId (TValue).
-        /// </summary>
-        [Obsolete]
-        public void ClearQuestionListAnswers()
-        {
-            QuestionListAnswers.Clear();
-        }
-
-        /// <summary>
-        /// This method is used by the auto-generated rules and should
-        /// not be used otherwise.
-        /// Empties the Dictionary<int, object> holding the questionId (TKey) and the
-        /// corresponding response (TValue).
-        /// </summary>
-        [Obsolete]
-        public void ClearInputQuestionsAnswers()
-        {
-            InputQuestionsAnswers.Clear();
-        }
-
         /// <summary>
         /// adds an item to the progress list
         /// </summary>
@@ -350,18 +240,6 @@ namespace LogicBuilder.RulesDirector
                 return;
 
             Progress.AddProgressItem(item);
-        }
-
-
-        /// <summary>
-        /// Given a dictionary of name and VariableInfo pairs, updates or
-        /// adds the variables to the automatic variables set
-        /// </summary>
-        /// <param name="values"></param>
-        [Obsolete]
-        protected void SetVariableValues(Dictionary<string, VariableInfo> values)
-        {
-            Variables.SetValues(values);
         }
 
         /// <summary>
@@ -386,7 +264,6 @@ namespace LogicBuilder.RulesDirector
             FlowBackupData flowBackupData = (FlowBackupData)fBackupData;
             this._driver = flowBackupData.Driver;
             this._selection = flowBackupData.Selection;
-            this._dialogClosed = flowBackupData.DialogClosed;
             this._callingModuleDriverStack = flowBackupData.CallingModuleDriverStack;
             this._callingModuleStack = flowBackupData.CallingModuleStack;
             this._moduleBeginName = flowBackupData.ModuleBeginName;
@@ -418,94 +295,6 @@ namespace LogicBuilder.RulesDirector
         }
 
         /// <summary>
-        /// Sets DialogClosed to true and sets the answers from the question form
-        /// </summary>
-        /// <param name="answers"></param>
-        [Obsolete]
-        public void AnswerQuestions(Dictionary<int, int> answers)
-        {
-            DialogClosed = true;
-            QuestionListAnswers.Clear();
-            foreach (int key in answers.Keys)
-                QuestionListAnswers.Add(key, answers[key]);
-        }
-
-        /// <summary>
-        /// Sets DialogClosed to true and sets the answers from the question form
-        /// </summary>
-        /// <param name="answers"></param>
-        [Obsolete]
-        public void AnswerQuestions(Dictionary<int, int> answers, string selection)
-        {
-            Selection = selection;
-            QuestionListAnswers.Clear();
-            foreach (int key in answers.Keys)
-                QuestionListAnswers.Add(key, answers[key]);
-        }
-
-        /// <summary>
-        /// Sets DialogClosed to true and sets the answers from the input question form
-        /// </summary>
-        /// <param name="answers"></param>
-        [Obsolete]
-        public void AnswerInputQuestions(Dictionary<int, InputResponse> answers)
-        {
-            DialogClosed = true;
-            InputQuestionsAnswers.Clear();
-            foreach (int key in answers.Keys)
-            {
-                if (answers[key].Answer != null)
-                    InputQuestionsAnswers.Add(key, answers[key].Answer);
-                else
-                {
-                    if (answers[key].Type.Equals(typeof(string)) || (answers[key].Type.IsGenericType && answers[key].Type.GetGenericTypeDefinition().Equals(typeof(Nullable<>))))
-                        InputQuestionsAnswers.Add(key, answers[key].Answer);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Sets DialogClosed to true and sets the answers from the input question form
-        /// </summary>
-        /// <param name="answers"></param>
-        [Obsolete]
-        public void AnswerInputQuestions(Dictionary<int, InputResponse> answers, string selection)
-        {
-            Selection = selection;
-            InputQuestionsAnswers.Clear();
-            foreach (int key in answers.Keys)
-            {
-                if (answers[key].Answer != null)
-                    InputQuestionsAnswers.Add(key, answers[key].Answer);
-                else
-                {
-                    if (answers[key].Type.Equals(typeof(string)) || (answers[key].Type.IsGenericType && answers[key].Type.GetGenericTypeDefinition().Equals(typeof(Nullable<>))))
-                        InputQuestionsAnswers.Add(key, answers[key].Answer);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Sets DialogClosed to true, updates the variables from the Update Variables Form, and executes the rules engine
-        /// </summary>
-        /// <param name="variables"></param>
-        [Obsolete]
-        public void UpdateVariables(Dictionary<string, VariableInfo> variables)
-        {
-            DialogClosed = true;
-            SetVariableValues(variables);
-        }
-
-        /// <summary>
-        /// Sets DialogClosed to true and executes the rules engine
-        /// </summary>
-        [Obsolete]
-        public void CloseDialog()
-        {
-            DialogClosed = true;
-        }
-
-        /// <summary>
         /// This property is used by the auto-generated rules and should not be used otherwise. It is called when the rule generated by a Flow Begin shape executes.
         /// </summary>
         /// <param name="moduleName"></param>
@@ -518,7 +307,6 @@ namespace LogicBuilder.RulesDirector
         {
             _callingModuleDriverStack = new System.Collections.Stack();
             _callingModuleStack = new System.Collections.Stack();
-            _dialogClosed = false;
             _driver = string.Empty;
             _moduleBeginName = string.Empty;
             _moduleEndName = string.Empty;
