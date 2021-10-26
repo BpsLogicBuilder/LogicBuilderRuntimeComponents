@@ -17,21 +17,11 @@ namespace RulesDirector.Tests.Flow
     {
         public SaveCourseTest(ITestOutputHelper output)
         {
-            List<System.Reflection.Assembly> assemblies = new List<System.Reflection.Assembly>
-            {
-                typeof(Contoso.Test.Business.Requests.BaseRequest).Assembly,
-                typeof(Contoso.Domain.BaseModelClass).Assembly,
-                typeof(LogicBuilder.RulesDirector.DirectorBase).Assembly,
-                typeof(string).Assembly
-            };
-
-            rulesCache = RulesService.LoadRulesSync(new RulesLoader());
             this.output = output;
             Initialize();
         }
 
         #region Fields
-        private readonly IRulesCache rulesCache;
         private IServiceProvider serviceProvider;
         private readonly ITestOutputHelper output;
         #endregion Fields
@@ -116,7 +106,7 @@ namespace RulesDirector.Tests.Flow
                 .AddSingleton<Progress, Progress>()
                 .AddSingleton<IRulesCache>(sp =>
                 {
-                    return rulesCache;
+                    return RulesService.LoadRulesSync(new RulesLoader());
                 })
                 .BuildServiceProvider();
         }
