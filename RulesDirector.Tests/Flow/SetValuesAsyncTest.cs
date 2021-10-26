@@ -1,6 +1,4 @@
-﻿using Contoso.Domain.Entities;
-using Contoso.Test.Business.Requests;
-using Contoso.Test.Flow;
+﻿using Contoso.Test.Flow;
 using Contoso.Test.Flow.Cache;
 using Contoso.Test.Flow.Rules;
 using LogicBuilder.RulesDirector;
@@ -69,7 +67,7 @@ namespace RulesDirector.Tests.Flow
                 .AddSingleton<Progress, Progress>()
                 .AddSingleton<IRulesCache>(sp =>
                 {
-                    return RulesService.LoadRules().GetAwaiter().GetResult();
+                    return RulesService.LoadRulesSync(new RulesLoader());
                 })
                 .BuildServiceProvider();
         }
