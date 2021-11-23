@@ -30,9 +30,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RulesDirector.Tests", "RulesDirector.Tests\RulesDirector.Tests.csproj", "{D04436C3-A9BD-4C31-AFB8-6B27D99130A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Test.Flow", "Contoso.Test.Flow\Contoso.Test.Flow.csproj", "{154D2F6C-1D7F-4ACF-975F-5A5FC738101E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contoso.Test.Flow", "Contoso.Test.Flow\Contoso.Test.Flow.csproj", "{154D2F6C-1D7F-4ACF-975F-5A5FC738101E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Test.Business", "Contoso.Test.Business\Contoso.Test.Business.csproj", "{91DE8889-92A6-4711-8A24-6D3501A70689}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contoso.Test.Business", "Contoso.Test.Business\Contoso.Test.Business.csproj", "{91DE8889-92A6-4711-8A24-6D3501A70689}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contoso.Domain", "Contoso.Domain\Contoso.Domain.csproj", "{28D0F91F-D69C-4B53-B576-419CEC271EE3}"
 EndProject
