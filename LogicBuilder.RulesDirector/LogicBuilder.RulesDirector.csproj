@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.Forms.Parameters" Version="2.0.1-alpha.0.1" />
+    <PackageReference Include="LogicBuilder.Forms.Parameters" Version="2.0.2" />
     <PackageReference Include="LogicBuilder.Workflow.Activities.Rules" Version="2.0.2" />
     <PackageReference Include="MinVer" Version="2.3.0">
       <PrivateAssets>all</PrivateAssets>
