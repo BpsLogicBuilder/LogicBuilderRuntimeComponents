@@ -7,7 +7,7 @@
     <Authors>BlaiseD</Authors>
     <Description>LogicBuilder.DataContracts defines the objects used to for real-time deployment of the rules during development - from the Logic Builder Client to the Web-API.</Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Removing obsolete RulesDirector members.</PackageReleaseNotes>
+    <PackageReleaseNotes>Apply AlsoKnownAs and Summary attributes to constructors.</PackageReleaseNotes>
     <PackageTags>linq expressions</PackageTags>
     <Copyright>Copyright © BPS 2017</Copyright>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilderRuntimeComponents</RepositoryUrl>

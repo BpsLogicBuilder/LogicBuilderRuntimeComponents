@@ -7,7 +7,7 @@
     <Authors>BlaiseD</Authors>
     <Description>LogicBuilder.RulesDirector.AspNetCore augments LogicBuilder.RulesDirector with ASP.NET Core with session management for the Logic Builder.</Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Removing obsolete RulesDirector members.</PackageReleaseNotes>
+    <PackageReleaseNotes>Apply AlsoKnownAs and Summary attributes to constructors.</PackageReleaseNotes>
     <PackageTags>rules execution</PackageTags>
     <Copyright>Copyright © BPS 2018</Copyright>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilderRuntimeComponents</RepositoryUrl>
@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.RulesDirector" Version="2.0.2" />
+    <PackageReference Include="LogicBuilder.RulesDirector" Version="2.0.3-alpha.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />

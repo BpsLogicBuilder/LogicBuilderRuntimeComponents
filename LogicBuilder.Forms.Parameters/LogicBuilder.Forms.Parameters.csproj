@@ -7,7 +7,7 @@
     <Authors>BlaiseD</Authors>
     <Description>Wrapper class for the Connector Shape.</Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Removing obsolete RulesDirector members.</PackageReleaseNotes>
+    <PackageReleaseNotes>Apply AlsoKnownAs and Summary attributes to constructors.</PackageReleaseNotes>
     <PackageTags>logic-builder rules standard-forms connector</PackageTags>
     <Copyright>Copyright © BPS 2017</Copyright>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilderRuntimeComponents</RepositoryUrl>
