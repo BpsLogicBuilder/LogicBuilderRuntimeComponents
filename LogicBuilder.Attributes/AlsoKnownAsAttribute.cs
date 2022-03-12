@@ -2,7 +2,7 @@
 
 namespace LogicBuilder.Attributes
 {
-    [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property | AttributeTargets.Method, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property | AttributeTargets.Method | AttributeTargets.Constructor, AllowMultiple = false)]
     public class AlsoKnownAsAttribute : Attribute
     {
         public string AlsoKnownAs { get; private set; }

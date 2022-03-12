@@ -6,12 +6,12 @@
     <PackageId>LogicBuilder.Forms.Parameters</PackageId>
     <Authors>BlaiseD</Authors>
     <Description>Wrapper class for the Connector Shape.</Description>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Removing obsolete RulesDirector members.</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Apply AlsoKnownAs and Summary attributes to constructors.</PackageReleaseNotes>
     <PackageTags>logic-builder rules standard-forms connector</PackageTags>
     <Copyright>Copyright © BPS 2017</Copyright>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilderRuntimeComponents</RepositoryUrl>
-    <PackageLicense>https://github.com/BlaiseD/LogicBuilder/blob/master/LICENSE.MD</PackageLicense>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/BlaiseD/LogicBuilder</PackageProjectUrl>
     <AssemblyOriginatorKeyFile>..\LogicBuilder.Rules.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
@@ -21,11 +21,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MinVer" Version="2.3.0">
+    <PackageReference Include="MinVer" Version="2.5.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>

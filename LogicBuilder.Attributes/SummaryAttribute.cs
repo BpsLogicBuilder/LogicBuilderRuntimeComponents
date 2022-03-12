@@ -2,7 +2,7 @@
 
 namespace LogicBuilder.Attributes
 {
-    [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Method | AttributeTargets.Constructor, AllowMultiple = false)]
     public class SummaryAttribute : Attribute
     {
         public string Summary { get; private set; }
