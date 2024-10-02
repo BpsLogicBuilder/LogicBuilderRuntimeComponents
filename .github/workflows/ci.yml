@@ -6,9 +6,12 @@ on:
   pull_request:
     branches: [ master ]
 
+permissions:
+    contents: read
+    packages: write
+
 jobs:
   build:
-    permissions: write-all
 
     runs-on: windows-latest
 

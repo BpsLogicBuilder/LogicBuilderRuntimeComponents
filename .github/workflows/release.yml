@@ -4,9 +4,12 @@ on:
   release:
     types: [published]
 
+permissions:
+    contents: read
+    packages: write
+
 jobs:
   build:
-    permissions: write-all
 
     runs-on: windows-latest
 
