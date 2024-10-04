@@ -10,7 +10,7 @@
     <PackageReleaseNotes>Apply AlsoKnownAs and Summary attributes to constructors.</PackageReleaseNotes>
     <PackageTags>logic-builder rules standard-forms connector</PackageTags>
     <Copyright>Copyright © BPS 2017</Copyright>
-    <RepositoryUrl>https://github.com/BlaiseD/LogicBuilderRuntimeComponents</RepositoryUrl>
+    <RepositoryUrl>https://github.com/BpsLogicBuilder/LogicBuilderRuntimeComponents</RepositoryUrl>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/BlaiseD/LogicBuilder</PackageProjectUrl>
     <AssemblyOriginatorKeyFile>..\LogicBuilder.Rules.snk</AssemblyOriginatorKeyFile>
