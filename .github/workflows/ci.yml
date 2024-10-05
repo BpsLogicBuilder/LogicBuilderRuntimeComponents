@@ -27,7 +27,7 @@ jobs:
         NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Add Nuget source
-      run: dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget
+      run: dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget1
 
     - name: Set Variables
       run: |
