@@ -29,6 +29,12 @@ jobs:
     - name: List Nuget Sources
       run: dotnet nuget list source
 
+    - name: Disable Nuget
+      run: dotnet nuget disable source nuget.org
+
+    - name: Reenable Nuget
+      run: dotnet nuget enable source nuget.org
+
     - name: Set Variables
       run: |
         echo "GITHUB_NUGET_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
