@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
     <ProjectReference Include="..\LogicBuilder.Attributes\LogicBuilder.Attributes.csproj" />
   </ItemGroup>
 
