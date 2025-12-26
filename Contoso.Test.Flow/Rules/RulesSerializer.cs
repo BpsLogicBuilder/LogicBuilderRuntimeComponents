@@ -46,13 +46,14 @@ namespace Contoso.Test.Flow.Rules
             if (ruleSet == null)
                 throw new InvalidOperationException(Properties.Resources.ruleSetCannotBeNull);
 
-            List<System.Reflection.Assembly> assemblies = new List<System.Reflection.Assembly>
-            {
+            List<System.Reflection.Assembly> assemblies =
+            [
+                typeof(Utils.TypeHelpers).Assembly,
                 typeof(Business.Requests.BaseRequest).Assembly,
                 typeof(Domain.BaseModelClass).Assembly,
                 typeof(LogicBuilder.RulesDirector.DirectorBase).Assembly,
                 typeof(string).Assembly
-            };
+            ];
 
             RuleValidation ruleValidation = new RuleValidation(typeof(FlowActivity), assemblies);
             if (!ruleSet.Validate(ruleValidation))
